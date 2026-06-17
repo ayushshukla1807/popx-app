@@ -1,0 +1,17 @@
+import { z } from 'zod';
+
+export const loginSchema = z.object({
+  email: z.string().min(1, 'Email is required').email('Invalid email address'),
+  password: z.string().min(6, 'Password must be at least 6 characters'),
+});
+
+export const signupSchema = z.object({
+  fullName: z.string().min(2, 'Full name must be at least 2 characters'),
+  phone: z.string().min(10, 'Phone number is required'),
+  email: z.string().min(1, 'Email is required').email('Invalid email address'),
+  password: z.string().min(6, 'Password must be at least 6 characters'),
+  company: z.string().min(2, 'Company name is required'),
+  isAgency: z.enum(['yes', 'no'], {
+    required_error: 'Please select if you are an agency',
+  }),
+});

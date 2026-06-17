@@ -2,13 +2,10 @@ import React from 'react';
 
 export const Layout = ({ children }) => {
   return (
-    <div className="min-h-screen bg-gray-100 w-full flex items-center justify-center p-0 sm:p-4">
-      {/* Mobile Simulator Container */}
-      <div className="w-full max-w-md h-screen sm:h-[850px] bg-white relative overflow-hidden sm:rounded-[2rem] sm:shadow-2xl sm:border-8 border-gray-900 flex flex-col">
-        {/* Optional Notch for extra realism on desktop */}
-        <div className="hidden sm:block absolute top-0 inset-x-0 h-6 bg-gray-900 w-40 mx-auto rounded-b-3xl z-50"></div>
-        
-        <div className="flex-1 overflow-y-auto overflow-x-hidden relative">
+    <div className="min-h-screen bg-gray-200 w-full flex items-center justify-center p-0 sm:p-4">
+      {/* Perfect Mobile Simulator (iPhone X dimensions) */}
+      <div className="w-full sm:w-[375px] h-screen sm:h-[812px] bg-[#f7f8f9] relative overflow-hidden sm:rounded-[2.5rem] sm:shadow-[0_20px_50px_rgba(0,0,0,0.15)] flex flex-col sm:border-[8px] border-white sm:border-gray-900">
+        <div className="flex-1 overflow-y-auto overflow-x-hidden relative flex flex-col bg-white">
           {children}
         </div>
       </div>
